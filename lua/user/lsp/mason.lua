@@ -1,6 +1,6 @@
 local servers = {
 	"lua_ls",
-  -- "rust_analyzer",
+  "rust_analyzer",
 	-- "cssls",
 	-- "html",
 	-- "tsserver",
