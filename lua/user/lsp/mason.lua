@@ -3,10 +3,11 @@ local servers = {
   "rust_analyzer",
 	-- "cssls",
 	-- "html",
-	-- "tsserver",
+	"tsserver",
 	"pyright",
 	-- "bashls",
 	"jsonls",
+	"clangd"
 	-- "yamlls",
 }
 
@@ -25,8 +26,8 @@ local settings = {
 
 require("mason").setup(settings)
 require("mason-lspconfig").setup({
-	ensure_installed = servers,
-	automatic_installation = true,
+	ensure_installed = {},
+	automatic_installation = false,
 })
 
 local lspconfig_status_ok, lspconfig = pcall(require, "lspconfig")
