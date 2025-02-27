@@ -44,12 +44,27 @@ return packer.startup(function(use)
   use { "elihunter173/dirbuf.nvim" }
 
   -- Colorschemes
-  -- use { "folke/tokyonight.nvim", commit = "66bfc2e8f754869c7b651f3f47a2ee56ae557764" }
   -- use { "lunarvim/darkplus.nvim", commit = "13ef9daad28d3cf6c5e793acfc16ddbf456e1c83" }
-  use({ 'rose-pine/neovim', as = 'rose-pine' })
+  use { "catppuccin/nvim", as = "catppuccin" }
+  use { 'rose-pine/neovim', as = 'rose-pine' }
   use { "ellisonleao/gruvbox.nvim", as = 'gruvbox' }
   use { "folke/tokyonight.nvim", as = 'tokyonight' }
   use { "rebelot/kanagawa.nvim", as = 'kanagawa' }
+  use { "blazkowolf/gruber-darker.nvim", as = 'gruber-darker' }
+  use { "projekt0n/github-nvim-theme" }
+  use { "nyoom-engineering/oxocarbon.nvim", as = "oxocarbon" }
+  use { "olimorris/onedarkpro.nvim" }
+  use { "bluz71/vim-nightfly-colors", as = "nightfly" }
+  use { "scottmckendry/cyberdream.nvim" }
+  use { "AlexvZyl/nordic.nvim" }
+  use { "savq/melange-nvim" }
+  use { "olivercederborg/poimandres.nvim" }
+  use { "ramojus/mellifluous.nvim" }
+  use { "neanias/everforest-nvim" }
+  use { "rockerBOO/boo-colorscheme-nvim" }
+  use { "vague2k/vague.nvim" }
+  use { "pauchiner/pastelnight.nvim" }
+  use { "ferdinandrau/lavish.nvim" }
 
 	-- Cmp 
   use { "hrsh7th/nvim-cmp", commit = "b0dff0ec4f2748626aae13f011d1a47071fe9abc" } -- The completion plugin
@@ -133,6 +148,13 @@ return packer.startup(function(use)
   use {
     "dart-lang/dart-vim-plugin"
   }
+
+  -- use {
+  --   "supermaven-inc/supermaven-nvim",
+  --   config = function()
+  --     require("supermaven-nvim").setup({})
+  --   end,
+  -- }
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
 	if PACKER_BOOTSTRAP then
