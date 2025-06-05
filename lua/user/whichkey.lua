@@ -79,7 +79,6 @@ local opts = {
 }
 
 local mappings = {
-  ["a"] = { "<cmd>Alpha<cr>", "Alpha" },
   ["b"] = {
     "<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<cr>",
     "Buffers",
@@ -90,11 +89,31 @@ local mappings = {
   ["c"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
   ["h"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
   ["f"] = {
-    "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<cr>",
-    "Find files",
+    "<cmd>:Telescope find_files<CR>",
+    "Find Files",
   },
   ["F"] = { "<cmd>Telescope live_grep theme=ivy<cr>", "Find Text" },
   ["P"] = { "<cmd>lua require('telescope').extensions.projects.projects()<cr>", "Projects" },
+
+  a = {
+    name = "Aerial",
+    a = { "<cmd>:Telescope aerial<CR>", "Aerial Toggle" }
+  },
+
+  n = {
+    name = "Neorg",
+    n = { "<Plug>(neorg.dirman.new-note)", "new note" },
+
+    b = {
+      name = "Backlinks",
+      f = { "<Plug>(neorg.telescope.backlinks.file_backlinks)", "File backlinks" },
+      h = { "<Plug>(neorg.telescope.backlinks.header_backlinks)", "Header Backlinks" }
+    },
+    
+    f = { "<Plug>(neorg.telescope.find_norg_files)", "Search .norg files" },
+    h = { "<Plug>(neorg.telescope.search_headings)", "Search headings" },
+    w = { "<Plug>(neorg.telescope.switch_workspace)", "Search workspace" }
+  },
 
   p = {
     name = "Packer",
